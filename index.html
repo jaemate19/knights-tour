@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour</title>
+    <!-- Different styles are organized into different folders based on the sections of the page -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/body/body.css">
+    <link rel="stylesheet" type="text/css" href="styles/info-section/info-section.css">
+    <link rel="stylesheet" type="text/css" href="styles/chessboard/chessboard.css">
+    <link rel="stylesheet" type="text/css" href="styles/control-section/control-section.css">
+</head>
+<body>
+    <!-- Main container that holds the entire app layout -->
+    <div class="main-container">
+
+        <!-- Section displaying game rules and instructions -->
+        <div class="info-section">
+            <h3>WELCOME TO THE KNIGHT'S TOUR!!</h3>
+            <h4> THE RULES OF THE GAME ARE AS FOLLOWS:</h4>
+            <li> The Knight can only move in an L shape,ie,two squares in one direction (horizontally or vertically) and then one square perpendicular to that direction.
+            <li> Each square can be visited only once</li>  
+            <li>The game is won when all 64 squares have been visited.</li>
+            <h4> HOW TO PLAY</h4>  
+            <li> Select a square where you want the tour to start</li>
+            <li> Make legal moves until you either reach a dead end(<b>lose</b>) or 
+                 you have visited all the squares on the board(<b>win</b>)</li>
+            <li> Use the hint button to find the next legal move
+            <li> You can reset the tour at any point</li>
+        </div>
+
+        <!-- Chessboard layout: 8 rows of 8 squares (buttons) each -->
+        <div class="chessboard">
+
+            <!-- Each row contains 8 buttons representing squares -->
+            <!-- Squares alternate between white and black for a chessboard pattern -->
+            <!-- Each button has an ID based on standard chess notation (e.g., A1, B2) -->
+            <!-- Clicking a button triggers the JavaScript function selectSquare(squareId) -->
+            <!-- Each button represents a chess square -->
+            <!-- Remaining squares alternate colors -->
+
+            <!-- Row A -->
+            <div class="row">
+                <button type="button" class="white-square" id="A1" onclick="selectSquare('A1')">A1</button>
+                <button type="button" class="black-square" id="A2" onclick="selectSquare('A2')">A2</button>
+                <button type="button" class="white-square" id="A3" onclick="selectSquare('A3')">A3</button>
+                <button type="button" class="black-square" id="A4" onclick="selectSquare('A4')">A4</button>
+                <button type="button" class="white-square" id="A5" onclick="selectSquare('A5')">A5</button>
+                <button type="button" class="black-square" id="A6" onclick="selectSquare('A6')">A6</button>
+                <button type="button" class="white-square" id="A7" onclick="selectSquare('A7')">A7</button>
+                <button type="button" class="black-square" id="A8" onclick="selectSquare('A8')">A8</button>
+            </div>                
+
+            <!-- Row B -->
+            <div class="row">
+                <button type="button" class="black-square" id="B1" onclick="selectSquare('B1')">B1</button>
+                <button type="button" class="white-square" id="B2" onclick="selectSquare('B2')">B2</button>
+                <button type="button" class="black-square" id="B3" onclick="selectSquare('B3')">B3</button>
+                <button type="button" class="white-square" id="B4" onclick="selectSquare('B4')">B4</button>
+                <button type="button" class="black-square" id="B5" onclick="selectSquare('B5')">B5</button>
+                <button type="button" class="white-square" id="B6" onclick="selectSquare('B6')">B6</button>
+                <button type="button" class="black-square" id="B7" onclick="selectSquare('B7')">B7</button>
+                <button type="button" class="white-square" id="B8" onclick="selectSquare('B8')">B8</button>
+            </div>    
+
+            <!-- Row C -->
+            <div class="row">
+                <button type="button" class="white-square" id="C1" onclick="selectSquare('C1')">C1</button>
+                <button type="button" class="black-square" id="C2" onclick="selectSquare('C2')">C2</button>
+                <button type="button" class="white-square" id="C3" onclick="selectSquare('C3')">C3</button>
+                <button type="button" class="black-square" id="C4" onclick="selectSquare('C4')">C4</button>
+                <button type="button" class="white-square" id="C5" onclick="selectSquare('C5')">C5</button>
+                <button type="button" class="black-square" id="C6" onclick="selectSquare('C6')">C6</button>
+                <button type="button" class="white-square" id="C7" onclick="selectSquare('C7')">C7</button>
+                <button type="button" class="black-square" id="C8" onclick="selectSquare('C8')">C8</button>
+            </div> 
+
+            <!-- Row D -->
+            <div class="row">
+                <button type="button" class="black-square" id="D1" onclick="selectSquare('D1')">D1</button>
+                <button type="button" class="white-square" id="D2" onclick="selectSquare('D2')">D2</button>
+                <button type="button" class="black-square" id="D3" onclick="selectSquare('D3')">D3</button>
+                <button type="button" class="white-square" id="D4" onclick="selectSquare('D4')">D4</button>
+                <button type="button" class="black-square" id="D5" onclick="selectSquare('D5')">D5</button>
+                <button type="button" class="white-square" id="D6" onclick="selectSquare('D6')">D6</button>
+                <button type="button" class="black-square" id="D7" onclick="selectSquare('D7')">D7</button>
+                <button type="button" class="white-square" id="D8" onclick="selectSquare('D8')">D8</button>
+            </div> 
+
+            <!-- Row E -->
+            <div class="row">
+                <button type="button" class="white-square" id="E1" onclick="selectSquare('E1')">E1</button>
+                <button type="button" class="black-square" id="E2" onclick="selectSquare('E2')">E2</button>
+                <button type="button" class="white-square" id="E3" onclick="selectSquare('E3')">E3</button>
+                <button type="button" class="black-square" id="E4" onclick="selectSquare('E4')">E4</button>
+                <button type="button" class="white-square" id="E5" onclick="selectSquare('E5')">E5</button>
+                <button type="button" class="black-square" id="E6" onclick="selectSquare('E6')">E6</button>
+                <button type="button" class="white-square" id="E7" onclick="selectSquare('E7')">E7</button>
+                <button type="button" class="black-square" id="E8" onclick="selectSquare('E8')">E8</button>
+            </div>                 
+
+            <!-- Row F -->
+            <div class="row">
+                <button type="button" class="black-square" id="F1" onclick="selectSquare('F1')">F1</button>
+                <button type="button" class="white-square" id="F2" onclick="selectSquare('F2')">F2</button>
+                <button type="button" class="black-square" id="F3" onclick="selectSquare('F3')">F3</button>
+                <button type="button" class="white-square" id="F4" onclick="selectSquare('F4')">F4</button>
+                <button type="button" class="black-square" id="F5" onclick="selectSquare('F5')">F5</button>
+                <button type="button" class="white-square" id="F6" onclick="selectSquare('F6')">F6</button>
+                <button type="button" class="black-square" id="F7" onclick="selectSquare('F7')">F7</button>
+                <button type="button" class="white-square" id="F8" onclick="selectSquare('F8')">F8</button>
+            </div>                      
+
+            <!-- Row G -->
+            <div class="row">
+                <button type="button" class="white-square" id="G1" onclick="selectSquare('G1')">G1</button>
+                <button type="button" class="black-square" id="G2" onclick="selectSquare('G2')">G2</button>
+                <button type="button" class="white-square" id="G3" onclick="selectSquare('G3')">G3</button>
+                <button type="button" class="black-square" id="G4" onclick="selectSquare('G4')">G4</button>
+                <button type="button" class="white-square" id="G5" onclick="selectSquare('G5')">G5</button>
+                <button type="button" class="black-square" id="G6" onclick="selectSquare('G6')">G6</button>
+                <button type="button" class="white-square" id="G7" onclick="selectSquare('G7')">G7</button>
+                <button type="button" class="black-square" id="G8" onclick="selectSquare('G8')">G8</button>
+            </div>   
+
+            <!-- Row H -->
+            <div class="row">
+                <button type="button" class="black-square" id="H1" onclick="selectSquare('H1')">H1</button>
+                <button type="button" class="white-square" id="H2" onclick="selectSquare('H2')">H2</button>
+                <button type="button" class="black-square" id="H3" onclick="selectSquare('H3')">H3</button>
+                <button type="button" class="white-square" id="H4" onclick="selectSquare('H4')">H4</button>
+                <button type="button" class="black-square" id="H5" onclick="selectSquare('H5')">H5</button>
+                <button type="button" class="white-square" id="H6" onclick="selectSquare('H6')">H6</button>
+                <button type="button" class="black-square" id="H7" onclick="selectSquare('H7')">H7</button>
+                <button type="button" class="white-square" id="H8" onclick="selectSquare('H8')">H8</button>
+            </div>   
+        </div>
+        <!-- Section containing player controls -->
+        <div class="control-section"> 
+            <!-- Hint button triggers function to highlight legal moves -->
+            <button type="button" class="hint-button" onclick="showLegalMoves()">Hint</button> 
+
+            <!-- Label and div to display visited squares count or list -->
+            <label class="info-label">Complete Squares:</label> 
+            <div class="inform-player" id="informPlayer"></div>
+
+            <!-- Reset button reloads the page and resets the game -->
+            <button type="button" class="reset-button" onclick="location.reload()">Reset tour</button>  
+        </div>
+    </div>    
+
+    <!-- JavaScript file that drives the game logic -->
+    <script src="script.js"></script> 
+</body>
+</html>

@@ -1,0 +1,79 @@
+/* Container for control buttons and info display */
+.control-section {
+    display: inline-block;
+    background-color: transparent;
+    height: 500px;
+    width: 200px;
+    border-width: 0px;
+    opacity: 1;
+}
+
+/* Style for the Reset button */
+.reset-button 
+{
+    margin-left: 24px;
+    margin-top: 90px;
+    font-family: Arial, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 20px;
+    color: black;
+    background-color: #f28b82;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 2px;
+}
+
+.reset-button:hover 
+{
+    filter: brightness(0.9);
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+} 
+
+/* Style for the Hint button */
+.hint-button {
+    width: 120px;
+    display: block;
+    color: white;
+    background-color: darkblue;
+    margin-left: 24px;
+    font-family: Arial, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    border: 1px solid lightblue;
+}
+
+.hint-button:hover 
+{
+    filter: brightness(0.9);
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+} 
+
+/* Label describing the player info section */
+.info-label {
+    color: white;
+    margin-left: 24px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Box that displays visited squares or status */
+.inform-player {
+    color: black;
+    background-color: lightblue;
+    width: 250px;
+    height: 120px;
+    margin-left: 24px;
+    margin-top: 10px;
+    overflow-wrap: break-word;
+    border: 2px solid black; /* Properly defined border */
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}

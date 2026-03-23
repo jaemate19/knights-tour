@@ -1,0 +1,110 @@
+/* Container for the chessboard */
+.chessboard
+{
+    background-color: lightblue;  /* Light blue background for the chessboard area */
+    width: 600px;                 /* Width to fit 8 squares of 75px each */
+    height: 600px;                /* Height to fit 8 rows of 75px each */
+    margin-left: 30px;           /* Space on the left to separate from other sections */
+    margin-right: 30px;          /* Space on the right for symmetry */
+}
+
+/* Represents a single row in the chessboard */
+.row
+{
+    display: flex; /* Aligns squares in a row horizontally */
+}
+
+/* Style for white squares on the chessboard */
+.white-square 
+{
+    opacity: 0.9;                /* Slight transparency */
+    background-color: white;    /* White background */
+    color: black;               /* Text color */
+    width: 75px;                /* Fixed square size */
+    height: 75px;
+    border: 1px solid #333;     /* Border for visual separation */
+    font-size: 14px;            /* Font size of the label inside */
+    cursor: pointer;            /* Indicates the square is clickable */
+    justify-content: center;    /* Center content horizontally (needs flex container) */
+    align-items: center;        /* Center content vertically (needs flex container) */
+}
+
+.white-square:hover 
+{
+    filter: brightness(0.9);
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+} 
+
+/* Style for black squares on the chessboard */
+.black-square 
+{
+    opacity: 0.9;
+    background-color: lightgrey; /* Light grey instead of true black for visual appeal */
+    color: white;
+    width: 75px;
+    height: 75px;
+    border: 1px solid #333;
+    font-size: 14px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.black-square:hover 
+{
+    filter: brightness(0.9);
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+} 
+
+/* Style for the square where the knight started */
+.start-square
+{
+    background-color: red;     /* Red to indicate starting point */
+    color: white;
+    width: 75px;
+    height: 75px;
+    border: 1px solid #333;
+    font-size: 14px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+/* Style for the square currently occupied by the knight */
+.transit-square
+{
+    background-image: url('../../icons/knight.png'); /* Knight icon */
+    color: green;
+    width: 75px;
+    height: 75px;
+    opacity: 1;
+    background-size: cover;    /* Make image fill the square */
+}
+
+/* Style for squares that have already been visited */
+.visited-square
+{
+    background-color: limegreen; /* Bright green to indicate visited status */
+    color: darkred;
+    width: 75px;
+    height: 75px;
+    border: 1px solid #333;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for squares that are legal next moves (used as hints) */
+.legal-hint
+{
+    background-color: hotpink; /* Highlight with a distinct color */
+    width: 75px;
+    height: 75px;
+    border: 1px solid #333;
+    justify-content: center;
+    align-items: center;
+}
+

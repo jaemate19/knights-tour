@@ -1,0 +1,10 @@
+body
+{
+   background-color: #252939;
+   
+}
+
+.main-container
+{
+    display: flex;
+}
