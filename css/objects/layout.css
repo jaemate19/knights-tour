@@ -1,0 +1,13 @@
+/* ===== MAIN CONTAINER ===== */
+.main-container 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}

@@ -1,0 +1,20 @@
+/* ===== CHESSBOARD SECTION ===== */
+.chessboard-container 
+{
+    flex: 0 0 auto;
+}
+
+.chessboard 
+{
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.row 
+{
+    display: flex;
+}
